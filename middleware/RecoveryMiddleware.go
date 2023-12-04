@@ -6,6 +6,8 @@ import (
 	"jkdev.cn/api/response"
 )
 
+//返回 "请求异常" 的响应
+
 func RecoveryMiddleware() gin.HandlerFunc {
 	return func(ctx *gin.Context) {
 		defer func() {

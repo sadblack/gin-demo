@@ -9,6 +9,8 @@ import (
 const timeFormat = "2006-01-02 15:04:05"
 const timezone = "Asia/Shanghai"
 
+//日期工具类
+
 type Time time.Time
 
 func (t Time) MarshalJSON() ([]byte, error) {

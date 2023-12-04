@@ -82,7 +82,7 @@ func (c CategoryController) Show(ctx *gin.Context) {
 }
 
 func (c CategoryController) Delete(ctx *gin.Context) {
-	// 获取path中的参数,将字符串强转成int类型
+	// 获取path中的参数,将字符串强转成int类型，下划线表示忽略第二个参数，即忽略错误
 	categoryId, _ := strconv.Atoi(ctx.Params.ByName("id"))
 	if err := c.Repository.DeleteById(categoryId); err != nil {
 		response.Fail(ctx, "删除失败，请重试", nil)

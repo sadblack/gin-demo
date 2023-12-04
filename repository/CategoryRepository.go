@@ -14,6 +14,8 @@ func NewCategoryRepository() CategoryRepository {
 	return CategoryRepository{DB: common.GetDB()}
 }
 
+//增删查改操作
+
 func (c CategoryRepository) Create(name string) (*model.Category, error) {
 	category := model.Category{
 		Name: name,
